@@ -1,0 +1,25 @@
+meta {
+  name: Editar Persona
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:8080/api/v1/persona
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "id": 8,
+      "usuario": {
+          "id": 11
+      },
+      "nombres": "Juan Carlos Actualizado",
+      "apellidos": "Pérez García Modificado",
+      "dni": "12563478",
+      "celular": "999888999",
+      "direccion": "Av. Ejemplo 456, Lima"
+  }
+}

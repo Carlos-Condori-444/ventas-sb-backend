@@ -1,0 +1,23 @@
+meta {
+  name: Actualizar Usuario
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://localhost:8080/api/v1/usuario
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "id": 3,
+    "username": "supervisor2 editado",
+    "passwordHash": "$2b$10$ExampleHash1234567890",
+    "tipoUsuario": "supervisor",
+    "activo": true
+  }
+  
+  
+}

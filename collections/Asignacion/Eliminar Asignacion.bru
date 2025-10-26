@@ -1,0 +1,23 @@
+meta {
+  name: Eliminar Asignacion
+  type: http
+  seq: 5
+}
+
+delete {
+  url: http://localhost:8080/api/v1/asignacion/4
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "supervisor": {
+          "id": 2
+      },
+      "vendedor": {
+          "id": 8
+      },
+      "activo": true
+  }
+}

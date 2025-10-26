@@ -1,0 +1,30 @@
+meta {
+  name: Editar Venta
+  type: http
+  seq: 5
+}
+
+put {
+  url: http://localhost:8080/api/v1/venta
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "id": 5,
+      "cliente": {"id": 4},
+      "vendedor": {"id": 8},
+      "planContratado": "Internet Fibra Óptica editado 5xdxdxdF",
+      "velocidad": "100 Mbps",
+      "precio": 99.9,
+      "comisionVendedor": null,
+      "observaciones": null,
+      "estado": "concretada",
+      "fechaVenta": "2024-01-15T00:00:00",
+      "fechaConcrecion": null,
+      "fechaCancelacion": null,
+      "motivoCancelacion": null,
+      "canceladoPor": null
+  }
+}

@@ -1,0 +1,24 @@
+meta {
+  name: Crear Persona
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8080/api/v1/persona
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "usuario": {
+          "id": 11
+      },
+      "nombres": "Juan Carlos",
+      "apellidos": "Pérez García",
+      "dni": "1234568",
+      "celular": "999888777",
+      "direccion": "Av. Ejemplo 123, Lima"
+  }
+}
