@@ -1,5 +1,7 @@
 package com.sva.cm.api_ventas.controller;
 
+import com.sva.cm.api_ventas.model.dtos.VentaCompletaRequest;
+import com.sva.cm.api_ventas.model.entity.Asignacion;
 import com.sva.cm.api_ventas.model.entity.Venta;
 import com.sva.cm.api_ventas.service.IVenta;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,5 +47,18 @@ public class VentaController {
     @ResponseStatus(HttpStatus.OK)
     public List<Venta> findAll(){
         return ventaService.findAll();
+    }
+
+    @GetMapping("ventas/vendedor/{vendedorId}")
+    @ResponseStatus(HttpStatus.OK)
+    public List<Venta> getVentasByVendedor(@PathVariable Integer vendedorId) {
+        return ventaService.findByVendedorId(vendedorId);
+    }
+
+    // ✅ NUEVO: Endpoint para venta completa
+    @PostMapping("venta-completa")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Venta crearVentaCompleta(@RequestBody VentaCompletaRequest request) {
+        return ventaService.crearVentaCompleta(request);
     }
 }

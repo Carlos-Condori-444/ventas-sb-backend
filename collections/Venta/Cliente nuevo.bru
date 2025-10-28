@@ -1,0 +1,32 @@
+meta {
+  name: Cliente nuevo
+  type: http
+  seq: 7
+}
+
+post {
+  url: http://localhost:8080/api/v1/venta-completa
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "clienteNuevo": true,
+    "cliente": {
+      "nombres": "Sara Maria ",
+      "apellidos": "Ferrero Pérez",
+      "dni": "14567238",
+      "direccion": "Av. Ejemplo 123",
+      "distrito": "Yanahuara",
+      "referencia": "por la san pepe",
+      "celular": "999888777",
+      "correo": "juan@email.com"
+    },
+    "vendedorId": 4,
+    "planContratado": "Internet Fibra Óptica",
+    "velocidad": "100 Mbps",
+    "precio": 99.90,
+    "observaciones": "Cliente muy interesado en el servicio"
+  }
+}

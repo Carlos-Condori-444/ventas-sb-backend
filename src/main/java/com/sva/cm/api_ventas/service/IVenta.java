@@ -1,6 +1,7 @@
 package com.sva.cm.api_ventas.service;
 
 
+import com.sva.cm.api_ventas.model.dtos.VentaCompletaRequest;
 import com.sva.cm.api_ventas.model.entity.Cliente;
 import com.sva.cm.api_ventas.model.entity.Venta;
 
@@ -18,4 +19,10 @@ public interface IVenta {
 
     //update
     Venta update(Venta venta);
+
+    //encontrar ventas por vendedor
+    List<Venta> findByVendedorId(Integer vendedorId);
+
+    //metodo para  crear venta completa
+    Venta crearVentaCompleta(VentaCompletaRequest request);
 }
